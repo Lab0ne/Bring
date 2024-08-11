@@ -66,6 +66,7 @@ extern "C"
 
 ## I need to use Old Windows for OH in my Virtual Machine. What Windows version do you support here?
 * Server: Windows 7.0 x64 (last SP updated) or higher
+	* In case of Windows 7 you have to install [Security Update for x64-based Systems (KB3063858)](https://www.microsoft.com/en-us/download/details.aspx?id=47442), see [details](https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net50#windows-7--81--server-2012)
 * Client: Windows 10 x64 (21H1) or higher
 * Don't forget to install .net8.0 runtime (latest available version)
   1. dotnet-runtime-8.X.X-win-x64.exe
@@ -113,7 +114,7 @@ It uses your CPU to optimize and pack the data to transfer by network from Clien
 
 We don't expect too much resource consumption (depends on your machine config) and suppose it can be ~5-7%.
 
-## I want to run it with antoher working directory or with another Configs/client1.json config or with another Configs/client.cer certificate for the Client or maybe for the Server too. How can I do that?
+## I want to run it with another working directory or with another Configs/client1.json config or with another Configs/client.cer certificate for the Client or maybe for the Server too. How can I do that?
 Run R3Bring.Client or R3Bring.Server with --help argument, check the log or see Console information about -r -c -s arguments. 
 
 You can set at running custom root (aka working) directory, custom filename of the Configs/foo.json config at the root directory or Configs/bar.cer certificate here.
