@@ -1,6 +1,6 @@
 # R3bring
 
-* Last build is [R3bring v0.0.0.1](https://github.com/Lab0ne/Bring/releases/tag/R3bring_0.0.0.1)
+* Last build is [R3bring v0.0.0.2](https://github.com/Lab0ne/Bring/releases/tag/R3bring_0.0.0.2)
 * We appreciate you with the helping to [improve that description](https://github.com/Lab0ne/Bring/issues) or to [give the feedback](https://www.maxinmontreal.com/forums) about R3bring.
 
 # FAQ
@@ -65,13 +65,19 @@ extern "C"
 ```
 
 ## I need to use Old Windows for OH in my Virtual Machine. What Windows version do you support here?
-* Server: Windows 7.0 x64 (last SP updated) or higher
-	* In case of Windows 7 you have to install [Security Update for x64-based Systems (KB3063858)](https://www.microsoft.com/en-us/download/details.aspx?id=47442), see [details](https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net50#windows-7--81--server-2012)
-* Client: Windows 10 x64 (21H1) or higher
-* Don't forget to install .net8.0 runtime (latest available version)
+* Server:
+  * Windows 7 x64 (SP1) or higher
+    * In case of Windows 7 x64 you have to install [Security Update for x64-based Systems (KB3063858)](https://www.microsoft.com/en-us/download/details.aspx?id=47442), see [details](https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net50#windows-7--81--server-2012)
+* Client:
+  * Windows 11 x64 22H2+ (build 20348 or higher) is recommended
+  * Windows 10 x64 21H2+ (build 19041 or higher) - yellow border can't be turned off
+
+```
+Don't forget to install .net8.0 runtime (latest available version)
   1. dotnet-runtime-8.X.X-win-x64.exe
   2. aspnetcore-runtime-8.X.X-win-x64.exe
   3. windowsdesktop-runtime-8.X.X-win-x64.exe
+```
 
 ## I have OH on the separate machine. How to connect R3bring.Client to R3bring.Server?
 Run R3bring.Server, check its log (on Console window or inside of Logs folder) - it has IP addresses of your network adapters. 
@@ -79,8 +85,9 @@ Run R3bring.Server, check its log (on Console window or inside of Logs folder) -
 Select one appropriate IP, set "host" value to it into server.json as well as you set it into client.json (or from R3bring.Client GUI).
 
 If you want to test it locally - use 127.0.0.1 IP address for the Client and Server.
+If you don't care about the Server - use 0.0.0.0 IP address only for the Server to listen all available IP addresses.
 
-Client and Server has to be used by the same port value.
+Client and Server has to be used by the same port value between 49152 and 65535.
 
 ## I hate the GUI, can Client be just a service or daemon process?
 Yes. Set "R3BringClientMode" value inside client.json to "Agent" mode - at start it will load config and start capturing according its parameters.
