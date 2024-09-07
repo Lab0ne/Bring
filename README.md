@@ -13,6 +13,7 @@ You run the R3bring.Client on the main machine to manage all the nessesary windo
 
 ### Installation
 * [Install all .NET Runtimes](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+* [Install Latest Microsoft Visual C++ Redistributable Version for the Client machine only](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 * Unpack R3bring zip to somewhere
 
 ### Starting to use
