@@ -1,6 +1,6 @@
 # R3bring
 
-* Last build is [R3bring v0.0.0.3](https://github.com/Lab0ne/Bring/releases/tag/R3bring_0.0.0.3)
+* Last build is [R3bring v0.0.0.5](https://github.com/Lab0ne/Bring/releases/tag/R3bring_0.0.0.5)
 * We appreciate you with the helping to [improve that description](https://github.com/Lab0ne/Bring/issues) or to [give the feedback](https://www.maxinmontreal.com/forums) about R3bring.
 
 # FAQ
